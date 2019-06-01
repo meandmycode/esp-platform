@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "node -r esm scripts/deploy.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "esm": "^3.2.25",
+    "espruino": "^0.1.28"
+  }
+}

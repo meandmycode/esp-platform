@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP-Control</title>
+</head>
+<body>
+  <input name="0" type="range" min="0" max="180">
+  <input name="1" type="range" min="0" max="180">
+  <script>
+
+    const ws = new WebSocket("ws://192.168.1.71");
+
+    document.addEventListener("input", e => {
+      const { name: index, valueAsNumber: degree } = e.target;
+      ws.send(JSON.stringify({ index, degree }));
+    });
+  
+  </script>
+</body>
+</html>
